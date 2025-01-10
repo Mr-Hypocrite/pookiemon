@@ -21,9 +21,11 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "noUncheckedSideEffectImports": true,
+        "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "@styled-system/*": ["./styled-system/*"]
         }
     },
-    "include": ["src"]
+    "include": ["src", "styled-system"]
 }

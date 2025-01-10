@@ -26,3 +26,7 @@ dist-ssr
 
 # Environtment
 *.env
+
+## Panda
+styled-system
+styled-system-studio

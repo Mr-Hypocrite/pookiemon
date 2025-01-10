@@ -8,14 +8,17 @@
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "prepare": "panda codegen"
     },
     "dependencies": {
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "react-router": "^7.1.1"
     },
     "devDependencies": {
         "@eslint/js": "^9.17.0",
+        "@pandacss/dev": "^0.51.1",
         "@types/react": "^18.3.18",
         "@types/react-dom": "^18.3.5",
         "@vitejs/plugin-react": "^4.3.4",
