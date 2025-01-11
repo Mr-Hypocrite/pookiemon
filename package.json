@@ -12,6 +12,7 @@
         "prepare": "panda codegen"
     },
     "dependencies": {
+        "@tanstack/react-query": "^5.63.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-router": "^7.1.1"
