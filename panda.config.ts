@@ -12,7 +12,22 @@ export default defineConfig({
 
     // Useful for theme customization
     theme: {
-        extend: {}
+        extend: {
+            tokens: {
+                fonts: {
+                    logo: { value: '"Borel", serif' },
+                    pixelated: { value: '"Press Start 2P", serif' }
+                },
+                colors: {
+                    background: {
+                        value: 'var(--background)'
+                    },
+                    foreground: {
+                        value: 'var(--foreground)'
+                    }
+                }
+            }
+        }
     },
     jsxFramework: 'react',
     // The output directory for your css system
