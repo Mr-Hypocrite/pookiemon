@@ -24,6 +24,12 @@ export default defineConfig({
                     },
                     foreground: {
                         value: 'var(--foreground)'
+                    },
+                    overlay: {
+                        value: 'var(--overlay)'
+                    },
+                    accent: {
+                        value: 'var(--accent)'
                     }
                 }
             }
