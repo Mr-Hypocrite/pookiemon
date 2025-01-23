@@ -11,9 +11,7 @@ export const getResourceDefaultSprite = (
     url: string
 ) => {
     if (resourceType === 'pokemon') {
-        const spriteSrc = `${baseSpritePath}pokemon/${getResourceIdFromUrl(url)}.png`;
         const spriteOfficialArtworkSrc = `${baseSpritePath}pokemon/other/official-artwork/${getResourceIdFromUrl(url)}.png`;
-        const gifSrc = `${baseSpritePath}pokemon/other/showdown/${getResourceIdFromUrl(url)}.gif`;
         return spriteOfficialArtworkSrc;
     } else if (resourceType === 'berry') {
         return `${baseSpritePath}items/${name}-berry.png`;
