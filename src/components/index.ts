@@ -1,4 +1,5 @@
 export * from './footer';
+export * from './button';
 export * from './cards';
 export * from './grids';
 export * from './header';
