@@ -6,6 +6,7 @@ import { HiArrowUpRight } from 'react-icons/hi2';
 import { RiMenu5Fill } from 'react-icons/ri';
 import { Link } from 'react-router';
 import { BodyText } from '../text';
+import { linkStyle } from '@/styles';
 
 export type HeaderProps = {};
 
@@ -65,19 +66,19 @@ const DesktopHeader: FC = () => {
                     </Link>
 
                     <Flex gap={'8'} className={css({ display: 'none', md: { display: 'flex' } })}>
-                        <Link to={'/pokemon'}>
+                        <Link to={'/pokemon'} className={linkStyle()}>
                             <Flex alignItems={'center'} gap={1}>
                                 <BodyText>pokémon</BodyText>
                                 <HiArrowUpRight strokeWidth={1} />
                             </Flex>
                         </Link>
-                        <Link to={'/berries'}>
+                        <Link to={'/berries'} className={linkStyle()}>
                             <Flex alignItems={'center'} gap={1}>
                                 <BodyText>berries</BodyText>
                                 <HiArrowUpRight strokeWidth={1} />
                             </Flex>
                         </Link>
-                        <Link to={'/items'}>
+                        <Link to={'/items'} className={linkStyle()}>
                             <Flex alignItems={'center'} gap={1}>
                                 <BodyText>items</BodyText>
                                 <HiArrowUpRight strokeWidth={1} />
@@ -131,19 +132,19 @@ const MobileMenu: FC<MobileMenuProps> = () => {
                 py={'4'}
                 borderBottomRadius={'sm'}
             >
-                <Link to={'/pokemon'}>
+                <Link to={'/pokemon'} className={linkStyle()}>
                     <Flex textAlign={'inherit'} alignItems={'center'} gap={1}>
                         <BodyText>pokémon</BodyText>
                         <HiArrowUpRight size={10} strokeWidth={1} />
                     </Flex>
                 </Link>
-                <Link to={'/berries'}>
+                <Link to={'/berries'} className={linkStyle()}>
                     <Flex textAlign={'inherit'} alignItems={'center'} gap={1}>
                         <BodyText>berries</BodyText>
                         <HiArrowUpRight size={10} strokeWidth={1} />
                     </Flex>
                 </Link>
-                <Link to={'/items'}>
+                <Link to={'/items'} className={linkStyle()}>
                     <Flex textAlign={'inherit'} alignItems={'center'} gap={1}>
                         <BodyText>items</BodyText>
                         <HiArrowUpRight size={10} strokeWidth={1} />

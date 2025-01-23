@@ -1,10 +1,11 @@
+import homebg from '@/assets/home-bg.jpg';
 import { BodyText } from '@/components';
+import { linkStyle } from '@/styles';
 import { css } from '@styled-system/css';
 import { Container, Flex } from '@styled-system/jsx';
 import { FC } from 'react';
 import { HiArrowUpRight } from 'react-icons/hi2';
 import { Link } from 'react-router';
-import homebg from '@/assets/home-bg.jpg';
 
 export type HomeProps = {};
 
@@ -35,27 +36,19 @@ export const Home: FC<HomeProps> = () => {
                 <BodyText>explore the world the of pokémon</BodyText>
             </Flex>
             <Flex gap={'8'} alignItems={'center'} justifyContent={'center'} mt={'6'}>
-                <Link
-                    to={'/pokemon'}
-                    className={css({
-                        transition: 'color .3s ease-in-out',
-                        _hover: {
-                            color: 'pink.300'
-                        }
-                    })}
-                >
+                <Link to={'/pokemon'} className={linkStyle()}>
                     <Flex alignItems={'center'} gap={1}>
                         <BodyText>pokémon</BodyText>
                         <HiArrowUpRight strokeWidth={1} />
                     </Flex>
                 </Link>
-                <Link to={'/berries'}>
+                <Link to={'/berries'} className={linkStyle()}>
                     <Flex alignItems={'center'} gap={1}>
                         <BodyText>berries</BodyText>
                         <HiArrowUpRight strokeWidth={1} />
                     </Flex>
                 </Link>
-                <Link to={'/items'}>
+                <Link to={'/items'} className={linkStyle()}>
                     <Flex alignItems={'center'} gap={1}>
                         <BodyText>items</BodyText>
                         <HiArrowUpRight strokeWidth={1} />
