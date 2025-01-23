@@ -1,14 +1,22 @@
-import { BodyText, LoadingGrid, ResourceCard, ResourceGrid, ResourceHeading } from '@/components';
+import {
+    BodyText,
+    LoadingGrid,
+    Pagination,
+    ResourceCard,
+    ResourceGrid,
+    ResourceHeading
+} from '@/components';
 import { Resource, useGetResource } from '@/hooks';
 import { css } from '@styled-system/css';
 import { Flex } from '@styled-system/jsx';
 import { FC } from 'react';
-import { Link, useSearchParams } from 'react-router';
+import { Link, useNavigate, useSearchParams } from 'react-router';
 
 export type ItemsProps = {};
 
 export const Items: FC<ItemsProps> = () => {
     const [searchParams] = useSearchParams();
+    const navigate = useNavigate();
 
     const { data, error, isLoading } = useGetResource({
         resourceName: Resource.Item,
@@ -50,6 +58,22 @@ export const Items: FC<ItemsProps> = () => {
                     </BodyText>
                 </Flex>
             )}
+
+            <Pagination
+                currentPage={Number(searchParams.get('page')) || 1}
+                totalPages={Math.ceil(data?.count / 15)}
+                onPageChange={(page) => {
+                    navigate(`/items?page=${page}`);
+                }}
+                position={'fixed'}
+                mx={'auto'}
+                backgroundColor={'overlay'}
+                borderRadius={'sm'}
+                py={'2'}
+                bottom={'4'}
+                left={0}
+                right={0}
+            />
         </>
     );
 };
