@@ -5,5 +5,6 @@ export * from './grids';
 export * from './header';
 export * from './layouts';
 export * from './not-found';
+export * from './pagination';
 export * from './scroll-to-top';
 export * from './text';
