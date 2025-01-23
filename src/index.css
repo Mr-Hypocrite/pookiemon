@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import './styles/pagination.css';
 @layer reset, base, tokens, recipes, utilities;
 
 @layer base {
@@ -42,5 +43,7 @@
         --background: #020100;
         --overlay: rgba(0, 0, 0, 0.8);
         --accent: rgba(255, 255, 255, 0.1);
+        --brand: #f9a8d4;
+        --disabled: #525252;
     }
 }
